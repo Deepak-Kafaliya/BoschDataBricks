@@ -28,7 +28,7 @@ jobs:
        ${{ secrets.DATABRICKS_TOKEN }}
        EOF
    - name: Upload Notebook to DBFS
-     run: databricks fs cp BoschDataBricks/sample_sales_notebook.dbc /Workspace/Users/deepakkafaliya@outlook.com/your_notebook --overwrite
+     run: databricks fs cp BoschDataBricks/sample_sales_notebook.dbc dbfs:/Workspace/Users/deepakkafaliya@outlook.com/your_notebook --overwrite
      env:
        DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
 
